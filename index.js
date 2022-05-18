@@ -2,6 +2,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const twitchSigningSecret = process.env.TWITCH_SIGNING_SECRET;
 const dbPass = process.env.DATABASE_PASSWORD;
+const hookURL = process.env.DISCORD_WEBHOOK;
 const request = require("request");
 const async = require("async");
 var accessToken = '';
@@ -9,7 +10,7 @@ const {
     Webhook,
     MessageBuilder
 } = require('discord-webhook-node');
-const hook = new Webhook("https://discord.com/api/webhooks/870449692000022598/A-kIXGF_fvfEWiQ6zhai6lOZNB312PHo86NettXRVupLj86vX6cqtMOTbMGWrxvYFg6R");
+const hook = new Webhook(hookURL);
 var mysql = require('mysql');
 
 

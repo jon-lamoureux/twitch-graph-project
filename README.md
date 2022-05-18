@@ -1,0 +1,6 @@
+## Twitch Graphing Project to Visualize Shared Communities
+The goal is to be able to retrieve the list of the current top 100 streamers within any specified game category, and go through each of their viewer lists one by one using the TMI API to pull the list of usernames, and then after 30 days of consistent data collection every halk hour, link the streamers together in a graph based off of the common usernames they share in their viewers. Exact specifications for how frequently a user must show up to be determined a loyal viewer to that streamer is yet to be determined, and will probably be decided after the 30 days are up. Bots such as Nightbot or StreamElements must be blacklisted from the database and not counted.
+
+The project will be set up to run automatically on a 24/7 DigitalOcean server and will run approximately every 30 minutes in order to fetch data consistently and get as many streamers within the game category as possible. A lot of small details are yet to be determined, but the general idea of the project seems doable.
+
+I have made sure all the small technical details are possible, and I believe the project is achieveable.
